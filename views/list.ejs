@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="box" id="heading"><h1><%= kindOfDay %></h1></div>
+    <div class="box">
+        <ul>
+            <% for(var i = 0; i<newListItems.length; i++){ %>
+                <li><%= newListItems[i] %></li>
+            <% } %>
+        </ul>
+        <form class="box item" action="/"  method="POST" >
+            <input class="inputAdd" type="text" name="newItem" placeholder="New Items">
+            <button type="submit" name="button">+</button>
+        </form>
+    </div>
+
+    <script src=""></script>
+    <script>
+        // Click on a close button to hide the current list item
+        var close = document.getElementsByClassName("close");
+        var i;
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function() {
+                var div = this.parentElement;
+                div.style.display = "none";
+            }
+        }
+
+        // Add a "checked" symbol when clicking on a list item
+        var list = document.querySelector('ul');
+        list.addEventListener('click', function(ev) {
+        if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');
+        }}, false);
+    </script>
+
+</body>
+</html>

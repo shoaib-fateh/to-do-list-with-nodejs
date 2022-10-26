@@ -1,0 +1,144 @@
+:root {
+  --blue: #559dcc;
+  --blue-dark: #4887b1;
+}
+
+html{
+  background-color: #E4E9Fd;
+  background-image: -webkit-linear-gradient(65deg, var(--blue) 50%, #E4E9FD 50%);
+  min-height: 100%;
+  font-family: monospace;
+}
+h1{
+  color: #FFF;
+  padding: 10px;
+}
+.box{
+  max-width: 400px;
+  margin: 50px auto;
+  background: #FFF;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+#heading{
+  background-color: var(--blue);
+  text-align: center;
+}
+.item{
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+.item:last-child{
+  border-bottom: 0;
+}
+p{
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00304a;
+}
+form{
+  text-align: center;
+  margin-left: 20px;
+}
+
+button{
+  cursor: pointer;
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--blue) !important;
+  background-color: var(--blue-dark);
+  color: #FFF;
+  font-size: 30px;
+  border-width: 0;
+  user-select: none;
+}
+
+button:hover {
+  border: 1px solid var(--blue-dark) !important;
+  background-color: var(--blue);
+}
+
+button:active {
+ border: 1px solid var(--blue) !important;
+  background-color: var(--blue-dark);
+}
+
+.inputAdd{
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+.inputAdd:focus{
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 var(--blue);
+}
+::placeholder{
+  color: gray;
+  opacity: 1;
+}
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  list-style: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul li:nth-child(odd) {
+  background: var(--blue);
+  color: #FFF;
+}
+
+ul li:hover {
+  background: var(--blue-dark);
+  color: #FFF;
+}
+
+ul li.checked {
+  background: var(--blue);
+  color: #fff;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
